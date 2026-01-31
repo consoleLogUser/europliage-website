@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm run build:*)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t 5)",
+      "Bash(npx tsc:*)",
+      "Bash(npx next:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\\\\images-europliage\"\" 2>&1 || dir \"C:UsersaimanDocumentsERP_EUROPLIAGEsite-web_v2publicimages-europliage \")",
+      "Bash(ls -la \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\"\" 2>/dev/null || dir \"C:UsersaimanDocumentsERP_EUROPLIAGEsite-web_v2public \")",
+      "Bash(dir \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\")",
+      "Bash(dir:*)"
+    ]
+  }
+}

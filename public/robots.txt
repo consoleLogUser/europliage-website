@@ -1,0 +1,30 @@
+# Robots.txt pour Europliage - Metallerie et Tolerie Industrielle
+# https://www.europliage.com
+
+User-agent: *
+Allow: /
+
+# Pages principales
+Allow: /services
+Allow: /produits
+Allow: /realisations
+Allow: /a-propos
+Allow: /contact
+
+# Ressources statiques
+Allow: /images/
+Allow: /images-europliage/
+
+# Fichiers SEO
+Allow: /sitemap.xml
+
+# Bloquer les ressources inutiles pour le crawl
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /_next/image
+
+# Sitemap
+Sitemap: https://www.europliage.com/sitemap.xml
+
+# Crawl-delay pour eviter surcharge serveur
+Crawl-delay: 1

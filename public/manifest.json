@@ -1,0 +1,54 @@
+{
+  "name": "Europliage - Metallerie et Tolerie Industrielle",
+  "short_name": "Europliage",
+  "description": "Expert en metallerie et tolerie industrielle depuis 1990. Decoupe laser, pliage CNC, soudure et thermolaquage a Saint-Laurent-du-Var.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr-FR",
+  "categories": ["business", "industrial"],
+  "icons": [
+    {
+      "src": "/images-europliage/logo-europliage.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images-europliage/logo-europliage.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images-europliage/decoupe-laser-acier.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Decoupe laser Europliage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Demander un devis gratuit",
+      "url": "/contact",
+      "icons": [{ "src": "/images-europliage/logo-europliage.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "Nos services de metallerie",
+      "url": "/services",
+      "icons": [{ "src": "/images-europliage/logo-europliage.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
