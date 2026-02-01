@@ -10,21 +10,28 @@ const Footer = () => {
     services: [
       { name: 'Découpe Laser', href: '/services#decoupe' },
       { name: 'Pliage CNC', href: '/services#pliage' },
-      { name: 'Soudure', href: '/services#soudure' },
       { name: 'Thermolaquage', href: '/services#thermolaquage' },
-      { name: 'Bureau d\'Études', href: '/services#bureau-etudes' },
+      { name: 'Nuancier RAL', href: '/nuancier' },
+      { name: 'Parc Machines', href: '/equipements' },
     ],
     produits: [
       { name: 'Couvertines', href: '/produits#couvertines' },
       { name: 'Précadres', href: '/produits#precadres' },
-      { name: 'Enseignes', href: '/produits#enseignes' },
-      { name: 'Brise-vue', href: '/produits#brise-vue' },
-      { name: 'Sur Mesure', href: '/produits#sur-mesure' },
+      { name: 'Habillages Façade', href: '/produits#facades' },
+      { name: 'Découpe Décorative', href: '/produits#decoupe-laser' },
+      { name: 'Tôlerie', href: '/produits#tolerie' },
     ],
     company: [
       { name: 'À Propos', href: '/a-propos' },
       { name: 'Réalisations', href: '/realisations' },
+      { name: 'Blog & Conseils', href: '/blog' },
+      { name: 'Certifications', href: '/certifications' },
+      { name: 'Recrutement', href: '/recrutement' },
+    ],
+    resources: [
       { name: 'Contact', href: '/contact' },
+      { name: 'Simulateur Devis', href: '/devis' },
+      { name: 'Zones de Livraison', href: '/zones-livraison' },
     ],
   };
 
@@ -167,6 +174,27 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.company.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-metal-400 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2 group text-xs sm:text-sm"
+                    >
+                      <span className="hidden sm:block w-0 group-hover:w-2 h-px bg-blue-400 transition-all duration-300" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Resources Column - Hidden on very small screens */}
+            <div className="hidden lg:block col-span-1 lg:col-span-2">
+              <h3 className="text-white font-semibold mb-4 sm:mb-6 flex items-center gap-2 text-sm sm:text-base">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full" />
+                Ressources
+              </h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}

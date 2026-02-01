@@ -50,16 +50,23 @@ function AnimatedCounter({ value, suffix = '', label }: { value: number; suffix?
 // Timeline Item Component
 function TimelineItem({ year, title, description, isLeft }: { year: string; title: string; description: string; isLeft: boolean }) {
   return (
-    <div className={`reveal flex items-center gap-8 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
-      <div className={`flex-1 ${isLeft ? 'text-right' : 'text-left'}`}>
-        <div className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-bold px-4 py-1 rounded-full mb-2">
+    <div className={`reveal flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+      {/* Content */}
+      <div className={`flex-1 glass p-6 rounded-xl ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
+        <div className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-3">
           {year}
         </div>
         <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
-        <p className="text-metal-400">{description}</p>
+        <p className="text-metal-400 leading-relaxed">{description}</p>
       </div>
-      <div className="w-4 h-4 bg-blue-500 rounded-full border-4 border-metal-800 flex-shrink-0 relative z-10" />
-      <div className="flex-1" />
+
+      {/* Center Dot */}
+      <div className="hidden md:flex flex-shrink-0 relative z-10">
+        <div className="w-5 h-5 bg-blue-500 rounded-full border-4 border-metal-900 shadow-lg shadow-blue-500/30" />
+      </div>
+
+      {/* Spacer for desktop */}
+      <div className="hidden md:block flex-1" />
     </div>
   );
 }
@@ -314,9 +321,74 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Timeline Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 gradient-bg" />
+
+        <div className="container-custom relative z-10 px-4 sm:px-0">
+          <div className="text-center mb-16">
+            <div className="reveal section-label mx-auto w-fit mb-4">
+              Notre Parcours
+            </div>
+            <h2 className="reveal heading-lg text-white mb-6" style={{ transitionDelay: '0.1s' }}>
+              Plus de 34 ans d'<span className="text-gradient">Histoire</span>
+            </h2>
+            <p className="reveal text-body-lg max-w-2xl mx-auto" style={{ transitionDelay: '0.2s' }}>
+              Découvrez les étapes clés qui ont façonné Europliage et fait de nous
+              un acteur incontournable de la métallerie dans le Sud-Est.
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-blue-600 to-purple-600 hidden md:block" />
+
+            <div className="space-y-12">
+              <TimelineItem
+                year="1990"
+                title="Création d'Europliage"
+                description="Fondation de l'entreprise à Saint-Laurent-du-Var. Installation du premier atelier de 200m² avec équipement de pliage manuel."
+                isLeft={true}
+              />
+              <TimelineItem
+                year="1998"
+                title="Premier Laser"
+                description="Acquisition de notre première machine de découpe laser. Début de la transformation numérique de notre production."
+                isLeft={false}
+              />
+              <TimelineItem
+                year="2005"
+                title="Expansion Atelier"
+                description="Déménagement vers un nouvel atelier de 500m². Installation d'une presse plieuse CNC dernière génération."
+                isLeft={true}
+              />
+              <TimelineItem
+                year="2012"
+                title="Thermolaquage Intégré"
+                description="Installation de notre propre cabine de thermolaquage. Maîtrise complète de la chaîne de production en interne."
+                isLeft={false}
+              />
+              <TimelineItem
+                year="2018"
+                title="Atelier 800m²"
+                description="Extension à 800m² avec modernisation complète du parc machines. Nouveau laser haute puissance et bureau d'études CAO."
+                isLeft={true}
+              />
+              <TimelineItem
+                year="2024"
+                title="34 ans d'Excellence"
+                description="Plus de 1500 projets réalisés. Certification qualité et poursuite des investissements dans l'innovation technologique."
+                isLeft={false}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-0">
           <div className="text-center mb-16">

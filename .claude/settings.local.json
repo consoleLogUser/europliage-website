@@ -16,7 +16,11 @@
       "Bash(ls -la \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\\\\images-europliage\"\" 2>&1 || dir \"C:UsersaimanDocumentsERP_EUROPLIAGEsite-web_v2publicimages-europliage \")",
       "Bash(ls -la \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\"\" 2>/dev/null || dir \"C:UsersaimanDocumentsERP_EUROPLIAGEsite-web_v2public \")",
       "Bash(dir \"C:\\\\Users\\\\aiman\\\\Documents\\\\ERP_EUROPLIAGE\\\\site-web_v2\\\\public\")",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(gh auth status:*)",
+      "Bash(winget install:*)",
+      "WebFetch(domain:www.tordjmanmetal.fr)",
+      "WebFetch(domain:www.picard-serrures.com)"
     ]
   }
 }

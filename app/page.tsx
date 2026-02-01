@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQSection from '@/components/FAQSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 
 // Animated Counter Component
 const AnimatedCounter = ({ target, suffix = '', duration = 2000 }: { target: number; suffix?: string; duration?: number }) => {
@@ -676,6 +677,9 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
       <FAQSection />
 
       {/* CTA Section */}
