@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
   title: 'Administration | Europliage',
@@ -19,8 +20,10 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-metal-950">
-      {children}
-    </div>
+    <Providers>
+      <div className="min-h-screen bg-metal-950">
+        {children}
+      </div>
+    </Providers>
   );
 }
