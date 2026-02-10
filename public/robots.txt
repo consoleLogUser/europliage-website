@@ -23,6 +23,9 @@ Disallow: /api/
 Disallow: /_next/static/
 Disallow: /_next/image
 
+# Bloquer l'acces admin
+Disallow: /ep-admin-2024/
+
 # Sitemap
 Sitemap: https://www.europliage.com/sitemap.xml
 
